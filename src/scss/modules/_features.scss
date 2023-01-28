@@ -1,0 +1,178 @@
+@use '../helper' as *;
+
+.features {
+    width: 100%;
+
+    > div {
+        height: 60rem;
+    }
+
+    .feature-box1 {
+        @include feature-description-box;
+    }
+
+    .feature-box2 {
+        background-image: url('/src/img/desktop/image-transform.jpg');
+        @include background-img;
+    }
+
+    .feature-box3 {
+        background-image: url('/src/img/desktop/image-stand-out.jpg');
+        @include background-img;
+    }
+
+    .feature-box4 {
+        @include feature-description-box;
+    }
+
+    .feature-box5 {
+        background-image: url('/src/img/desktop/image-graphic-design.jpg');
+        @include background-img;
+        @include feature-description-box-2;
+    }
+
+    .feature-box6 {
+        background-image: url('/src/img/desktop/image-photography.jpg');
+        @include background-img;
+        @include feature-description-box-2;
+    }
+
+    //GREATER MEDIA
+    @mixin greaterMedia($wdth, $height, $gap, $p1, $p2, $p3, $p4) {
+        @media (width >= $wdth) {
+            > div {
+                height: $height;
+            }
+
+            .feature-box1,
+            .feature-box4 {
+                gap: $gap;
+                padding: $p1 $p2;
+            }
+
+            .feature-box5,
+            .feature-box6 {
+                padding: $p3 $p4;
+            }
+        }
+    }
+    @mixin media($media, $wdth, $height, $gap, $p1, $p2, $p3, $p4) {
+        @if $media == greater {
+            @media (width >= $wdth) {
+                > div {
+                    height: $height;
+                }
+
+                .feature-box1,
+                .feature-box4 {
+                    gap: $gap;
+                    padding: $p1 $p2;
+                }
+
+                .feature-box5,
+                .feature-box6 {
+                    padding: $p3 $p4;
+                }
+            }
+        } @else if $media == less {
+            @media (width <= $wdth) {
+                > div {
+                    height: $height;
+                }
+
+                .feature-box1,
+                .feature-box4 {
+                    gap: $gap;
+                    padding: $p1 $p2;
+                }
+
+                .feature-box5,
+                .feature-box6 {
+                    padding: $p3 $p4;
+                }
+            }
+        }
+    }
+
+    //LOWER MEDIA
+    @include media(less, 78rem, 50rem, 3rem, 8rem, 8rem, 5rem, 14rem);
+    @include media(less, 62rem, 45rem, 3rem, 6rem, 6rem, 4rem, 11rem);
+    @include media(less, 52rem, 40rem, 3rem, 5rem, 5rem, 3rem, 7rem);
+
+    //GREATER MEDIA
+    @include media(greater, 107rem, 75rem, 4rem, 17rem, 17rem, 8rem, 25rem);
+    @include media(greater, 138rem, 90rem, 6rem, 21rem, 21rem, 10rem, 31rem);
+    @include media(greater, 169rem, 110rem, 8rem, 14rem, 24rem, 12rem, 37rem);
+
+    @media (width <= 48rem) {
+        grid-template-columns: 1fr;
+        > div {
+            height: 50rem;
+        }
+        .feature-box1,
+        .feature-box4 {
+            gap: 4rem;
+            padding: 14rem 14rem;
+        }
+
+        .feature-box1 {
+            grid-row: 2/3;
+        }
+
+        .feature-box5 p,
+        .feature-box6 p {
+            width: 30rem;
+        }
+
+        .feature-box5,
+        .feature-box6 {
+            padding-bottom: 5rem;
+        }
+    }
+    @media (width <= 36rem) {
+        .feature-box1,
+        .feature-box4 {
+            gap: 4rem;
+            padding: 8rem 8rem;
+        }
+    }
+
+    @media (width <= 28rem) {
+        .feature-box1,
+        .feature-box4 {
+            height: 40rem;
+        }
+
+        .feature-box2,
+        .feature-box3 {
+            height: 30rem;
+        }
+
+        .feature-box1 h2,
+        .feature-box4 h2,
+        .feature-box1 p,
+        .feature-box4 p,
+        .feature-box1 a,
+        .feature-box4 a {
+            text-align: center;
+        }
+
+        .feature-box1 h2,
+        .feature-box4 h2 {
+            font-size: 3rem;
+        }
+        .feature-box1,
+        .feature-box4 {
+            gap: 4rem;
+            padding: 3rem 3rem;
+        }
+
+        .feature-box5,
+        .feature-box6 {
+            padding: 0;
+            padding-bottom: 5rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

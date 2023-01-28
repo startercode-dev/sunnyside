@@ -1,0 +1,42 @@
+//PICTURES
+@mixin background-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+//FEATURES
+@mixin feature-description-box {
+    padding: 13rem 13rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+@mixin feature-description-box-2 {
+    padding: 6rem 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+//--------------------------
+//MEDIA QUERY --------------
+//--------------------------
+
+//ADD TO TEMPLATE

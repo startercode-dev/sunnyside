@@ -1,0 +1,213 @@
+@use '../helper/variables' as *;
+@use '../helper/mixin' as *;
+
+//FONT-FAMILY
+.ff-primary {
+    font-family: 'Barlow', sans-serif;
+}
+
+.ff-secondary {
+    font-family: 'Fraunces', serif;
+}
+
+//FONT COLOR
+.fc-white {
+    color: hsl(0, 0%, 100%);
+}
+
+.fc-light-grey {
+    color: #a7a9b7;
+}
+
+.fc-grey {
+    color: #818498;
+}
+
+.fc-dark-grey {
+    color: hsl(213, 9%, 39%);
+}
+
+.fc-light-green {
+    color: #51786f;
+}
+
+.fc-green {
+    color: #25564b;
+}
+
+.fc-light-blue {
+    color: #297594;
+}
+
+.fc-blue {
+    color: hsl(198, 62%, 26%);
+}
+.fc-dark-blue {
+    color: hsl(212, 27%, 19%);
+}
+.fc-black {
+    color: #000;
+}
+
+//FONT WEIGHT
+.fw-normal {
+    font-weight: 600;
+}
+.fw-semi {
+    font-weight: 700;
+}
+.fw-bold {
+    font-weight: 900;
+}
+
+//FONT SIZE
+.fs-000 {
+    font-size: $fs-000;
+}
+.fs-050 {
+    font-size: $fs-050;
+}
+.fs-100 {
+    font-size: $fs-100;
+}
+.fs-200 {
+    font-size: $fs-200;
+}
+.fs-300 {
+    font-size: $fs-300;
+}
+.fs-400 {
+    font-size: $fs-400;
+}
+.fs-500 {
+    font-size: $fs-500;
+}
+.fs-600 {
+    font-size: $fs-600;
+}
+
+//BACKGROUND COLOR
+.bg-000 {
+    background-color: #fffbf8;
+}
+.bg-100 {
+    background-color: #90d4c7;
+}
+
+//LETTER SPACING
+.ls-000 {
+    letter-spacing: 0.7rem;
+}
+
+//LINE-HEIGHT
+.lh-000 {
+    line-height: 1.8;
+}
+
+//LAYOUT
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//MEDIA QUERIES
+@mixin font-size(
+    $fs-000,
+    $fs-050,
+    $fs-100,
+    $fs-200,
+    $fs-300,
+    $fs-400,
+    $fs-500,
+    $fs-600
+) {
+    .fs-000 {
+        font-size: $fs-000;
+    }
+    .fs-050 {
+        font-size: $fs-050;
+    }
+    .fs-100 {
+        font-size: $fs-100;
+    }
+    .fs-200 {
+        font-size: $fs-200;
+    }
+    .fs-300 {
+        font-size: $fs-300;
+    }
+    .fs-400 {
+        font-size: $fs-400;
+    }
+    .fs-500 {
+        font-size: $fs-500;
+    }
+    .fs-600 {
+        font-size: $fs-600;
+    }
+}
+
+//LOWER MEDIA
+@media (width <= 78rem) {
+    @include font-size(
+        1rem,
+        1.2rem,
+        1.4rem,
+        2.4rem,
+        2.6rem,
+        2.6rem,
+        3.8rem,
+        4.4rem
+    );
+}
+@media (width <= 48rem) {
+    @include font-size(
+        1rem,
+        1.4rem,
+        1.6rem,
+        2.4rem,
+        2.6rem,
+        2.6rem,
+        3.8rem,
+        4rem
+    );
+}
+
+//GREATER MEDIA
+@media (width >= 107rem) {
+    @include font-size(
+        2rem,
+        2.2rem,
+        2.4rem,
+        3.6rem,
+        3.6rem,
+        3.6rem,
+        5rem,
+        5.6rem
+    );
+}
+@media (width >= 138rem) {
+    @include font-size(
+        2.4rem,
+        2.6rem,
+        3rem,
+        4.2rem,
+        4.2rem,
+        4.2rem,
+        5.6rem,
+        6.6rem
+    );
+}
+@media (width >= 169rem) {
+    @include font-size(
+        2.8rem,
+        3rem,
+        3.6rem,
+        4.8rem,
+        4.8rem,
+        4.8rem,
+        6.2rem,
+        8rem
+    );
+}

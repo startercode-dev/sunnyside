@@ -5,13 +5,259 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="src/scss/style.scss" />
     <script type="module" src="src/js/index.js"></script>
 
-    <title></title>
+    <title>sunnyside -- transform your brand</title>
   </head>
   <body>
-    <!-- BODY -->
+    <main>
+      <section class="hero">
+        <header class="header flex--spread">
+          <div class="logo">
+            <img src="/src/img/logo.svg" alt="sunnyside" />
+          </div>
+          <nav class="header-navigation">
+            <ul class="nav-list | flex">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link | fc-white fs-100 fw-normal ff-primary"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link | fc-white fs-100 fw-normal ff-primary"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link | fc-white fs-100 fw-normal ff-primary"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link btn | fc-black fs-050 fw-semi ff-secondary"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile-nav-btn">
+            <img src="/src/img/icon-hamburger.svg" alt="menu" />
+          </div>
+        </header>
+        <h1
+          class="hero__primary-text | ff-secondary fc-white fs-600 fw-bold ls-000"
+        >
+          WE ARE CREATIVES
+        </h1>
+        <div class="hero__arrow-down">
+          <img src="/src/img/icon-arrow-down.svg" alt="arrow down" />
+        </div>
+      </section>
+      <section class="features | grid--2cols bg-000">
+        <div class="feature-box1">
+          <h2 class="ff-secondary fs-500 fc-dark-blue fw-bold">
+            Transform your brand
+          </h2>
+          <p class="fs-100 ff-primary fc-grey fw-normal lh-000">
+            We are a full-service creative agency specializing in helping brands
+            grow faster. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a class="learn-more | ff-secondary fc-black fw-semi fs-100" href="#"
+            >LEARN MORE</a
+          >
+        </div>
+        <div class="feature-box2"></div>
+        <div class="feature-box3"></div>
+        <div class="feature-box4">
+          <h2 class="ff-secondary fs-500 fc-dark-blue fw-bold">
+            Stand out to the right audience
+          </h2>
+          <p class="fs-100 ff-primary fc-grey fw-normal lh-000">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we'll build and
+            extend your brand in digital places.
+          </p>
+          <a class="learn-more | ff-secondary fc-black fw-semi fs-100" href="#"
+            >LEARN MORE
+          </a>
+        </div>
+        <div class="feature-box5 | flex--center">
+          <h3 class="ff-secondary fs-300 fc-green fw-semi">Graphic Design</h3>
+          <p class="fs-050 fc-light-green ff-primary fw-normal lh-000">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients'
+            attention.
+          </p>
+        </div>
+        <div class="feature-box6 | flex--center">
+          <h3 class="ff-secondary fs-300 fc-blue fw-semi">Photography</h3>
+          <p class="fs-050 fc-light-blue ff-primary fw-normal lh-000">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h3 class="ff-secondary fs-100 fc-light-grey ls-000 fw-bold">
+          CLIENT TESTIMONIALS
+        </h3>
+        <div class="testimonies grid--3cols">
+          <div class="testmonial">
+            <div class="client-img">
+              <img src="/src/img/image-emily.jpg" alt="Emily R." />
+            </div>
+            <p
+              class="testimony | ff-primary fs-100 fc-dark-grey fw-normal lh-000"
+            >
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <p class="client-name | ff-secondary fs-100 fw-bold">Emily R.</p>
+            <p
+              class="client-position | ff-primary fs-000 fw-normal fc-light-grey"
+            >
+              Marketing Director
+            </p>
+          </div>
+          <div class="testmonial">
+            <div class="client-img">
+              <img src="/src/img/image-thomas.jpg" alt="Thomas S." />
+            </div>
+            <p
+              class="testimony | ff-primary fs-100 fc-dark-grey fw-normal lh-000"
+            >
+              Sunnyside's enthusiam coupled with their keen interest in our
+              brand's success made it a satisfying and enjoyable experience.
+            </p>
+            <p class="client-name | ff-secondary fs-100 fw-bold">Thomas S.</p>
+            <p
+              class="client-position | ff-primary fs-000 fw-normal fc-light-grey"
+            >
+              Chief Operating officer
+            </p>
+          </div>
+          <div class="testmonial">
+            <div class="client-img">
+              <img src="/src/img/image-jennie.jpg" alt="Jennie F." />
+            </div>
+            <p
+              class="testimony | ff-primary fs-100 fc-dark-grey fw-normal lh-000"
+            >
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <p class="client-name | ff-secondary fs-100 fw-bold">Jennie F.</p>
+            <p
+              class="client-position | ff-primary fs-000 fw-normal fc-light-grey"
+            >
+              Business Owner
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery grid--4cols">
+        <div class="gallery-img">
+          <img
+            src="/src/img/desktop/image-gallery-milkbottles.jpg"
+            alt="milkbottles"
+          />
+        </div>
+        <div class="gallery-img">
+          <img src="/src/img/desktop/image-gallery-orange.jpg" alt="orange" />
+        </div>
+        <div class="gallery-img">
+          <img src="/src/img/desktop/image-gallery-cone.jpg" alt="cone" />
+        </div>
+        <div class="gallery-img">
+          <img
+            src="/src/img/desktop/image-gallery-sugarcubes.jpg"
+            alt="sugar cube"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-100 | flex--center">
+      <div class="logo | flex--center">
+        <img src="/src/img/logo.svg" alt="sunnyside" />
+      </div>
+      <nav class="footer-nav">
+        <ul class="nav-list grid--3cols">
+          <li class="nav-items | flex--center">
+            <a
+              href="#"
+              class="footer-nav-link | fs-100 fw-normal ff-primary fc-light-green"
+              >About</a
+            >
+          </li>
+          <li class="nav-items | flex--center">
+            <a
+              href="#"
+              class="footer-nav-link | fs-100 fw-normal ff-primary fc-light-green"
+              >Services</a
+            >
+          </li>
+          <li class="nav-items | flex--center">
+            <a
+              href="#"
+              class="footer-nav-link | fs-100 fw-normal ff-primary fc-light-green"
+              >Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <ul class="social-list grid--4cols">
+          <li class="social-item | flex--center">
+            <img
+              class="social-link"
+              src="/src/img/icon-facebook.svg"
+              alt="facebook"
+            />
+          </li>
+          <li class="social-item | flex--center">
+            <img
+              class="social-link"
+              src="/src/img/icon-instagram.svg"
+              alt="Instagram"
+            />
+          </li>
+          <li class="social-item | flex--center">
+            <img
+              class="social-link"
+              src="/src/img/icon-twitter.svg"
+              alt="twitter"
+            />
+          </li>
+          <li class="social-item | flex--center">
+            <img
+              class="social-links"
+              src="/src/img/icon-pinterest.svg"
+              alt="Pinterest"
+            />
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

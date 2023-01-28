@@ -1,0 +1,43 @@
+@use '../helper' as *;
+
+.hero {
+    background-image: url('/src/img/desktop/image-header.jpg');
+    @include background-img;
+    height: 100vh;
+    position: relative;
+
+    &__primary-text {
+        text-align: center;
+    }
+
+    &__arrow-down {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+    &__arrow-down img {
+        width: 4rem;
+    }
+
+    //LOWER MEDIA
+    @media (width <= 78rem) {
+        &__arrow-down img {
+            width: 3rem;
+        }
+    }
+
+    //GREATER MEDIA
+    @media (width >= 107rem) {
+        &__arrow-down img {
+            width: 5rem;
+        }
+    }
+
+    @media (width >= 138rem) {
+        &__arrow-down img {
+            width: 7rem;
+        }
+    }
+}
