@@ -1,0 +1,7 @@
+@use '../helper' as *;
+
+@media (width <= 48rem) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}

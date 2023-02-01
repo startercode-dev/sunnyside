@@ -1,0 +1,116 @@
+.footer {
+    flex-direction: column;
+    padding: 8rem;
+
+    .logo {
+        margin-bottom: 5rem;
+    }
+
+    .logo img {
+        min-width: 18rem;
+    }
+
+    .footer-nav {
+        width: 35rem;
+        margin-bottom: 10rem;
+    }
+
+    .social-list {
+        gap: 2rem;
+    }
+
+    .social-link {
+        width: 2.5rem;
+    }
+
+    //GREATER MEDIA
+    @mixin media($media, $wdth, $p1, $mb1, $mw, $w, $mb2, $g, $w2) {
+        @if $media == greater {
+            @media (width >= $wdth) {
+                padding: $p1;
+
+                .logo {
+                    margin-bottom: $mb1;
+                }
+
+                .logo img {
+                    min-width: $mw;
+                }
+
+                .footer-nav {
+                    width: $w;
+                    margin-bottom: $mb2;
+                }
+
+                .social-list {
+                    gap: $g;
+                }
+
+                .social-link {
+                    width: $w2;
+                }
+            }
+        } @else if $media == less {
+            @media (width <= $wdth) {
+                padding: $p1;
+
+                .logo {
+                    margin-bottom: $mb1;
+                }
+
+                .logo img {
+                    min-width: $mw;
+                }
+
+                .footer-nav {
+                    width: $w;
+                    margin-bottom: $mb2;
+                }
+
+                .social-list {
+                    gap: $g;
+                }
+
+                .social-link {
+                    width: $w2;
+                }
+            }
+        }
+    }
+    //LESS MEDIA
+    @include media(less, 78rem, 6rem, 3rem, 16rem, 25rem, 6rem, 2rem, 2.5rem);
+    //GREATER MEDIA
+    @include media(
+        greater,
+        107rem,
+        10rem,
+        7rem,
+        20rem,
+        45rem,
+        12rem,
+        2.5rem,
+        3rem
+    );
+    @include media(
+        greater,
+        138rem,
+        12rem,
+        9rem,
+        22rem,
+        51rem,
+        16rem,
+        3rem,
+        3.5rem
+    );
+    @include media(
+        greater,
+        169rem,
+        14rem,
+        11rem,
+        26rem,
+        60rem,
+        18rem,
+        3.5rem,
+        4rem
+    );
+}

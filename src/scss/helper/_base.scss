@@ -17,7 +17,7 @@ html {
 body {
     min-height: 100%;
     font-weight: 400;
-    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
 }
 
 img,
@@ -28,13 +28,37 @@ video {
     max-width: 100%;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
+}
+
+.flex--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex--column {
     display: flex;
     flex-direction: column;
+}
+
+.flex--spread {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
 }
 
 .grid {
@@ -59,4 +83,8 @@ video {
 .grid--5cols {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+}
+
+.nav-link {
+    color: green;
 }
